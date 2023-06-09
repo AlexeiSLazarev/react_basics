@@ -1,25 +1,64 @@
-const products = [
-  { title: 'Cabbage', isFruit: false, id: 1 },
-  { title: 'Garlic', isFruit: false, id: 2 },
-  { title: 'Apple', isFruit: true, id: 3 },
-];
+import Square from "./components/square";
 
-export default function ShoppingList() {
-  const listItems = products.map(product =>
-    <li
-      key={product.id}
-      style={{
-        color: product.isFruit ? 'magenta' : 'darkgreen'
-      }}
-    >
-      {product.title}
-    </li>
-  );
-
+export default function Board() {
   return (
-    <ul>{listItems}</ul>
+    <>
+      <div className="board-row">
+        <Square />
+        <Square />
+        <Square />
+      </div>
+      <div className="board-row">
+        <Square />
+        <Square />
+        <Square />
+      </div>
+      <div className="board-row">
+        <Square />
+        <Square />
+        <Square />
+      </div>
+    </>
   );
 }
+
+
+
+
+// COUNTER
+// import Counter from "./components/counter";
+
+// export default function App() {
+//   return (
+//     <div>
+//       <h1>Welcome to my app</h1>
+//       <Counter/>
+//     </div>
+//   );
+// }
+
+// const products = [
+//   { title: 'Cabbage', isFruit: false, id: 1 },
+//   { title: 'Garlic', isFruit: false, id: 2 },
+//   { title: 'Apple', isFruit: true, id: 3 },
+// ];
+
+// export default function ShoppingList() {
+//   const listItems = products.map(product =>
+//     <li
+//       key={product.id}
+//       style={{
+//         color: product.isFruit ? 'magenta' : 'darkgreen'
+//       }}
+//     >
+//       {product.title}
+//     </li>
+//   );
+
+//   return (
+//     <ul>{listItems}</ul>
+//   );
+// }
 
 
 
